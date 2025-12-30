@@ -16,6 +16,9 @@ export async function POST(req: Request) {
       customer_email: "user@test.com",
       customer_phone: "9999999999",
     },
+    order_meta: {
+      payment_methods: "upi",
+    },
   });
 
   await supabase.from("bookings").insert({

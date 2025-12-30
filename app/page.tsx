@@ -22,6 +22,14 @@ export default function Home() {
     await cashfree.checkout({
       paymentSessionId: order.payment_session_id,
       redirectTarget: "_modal",
+      paymentMethods: {
+        upi: true,
+        card: false,
+        netbanking: false,
+        wallet: false,
+        paylater: false,
+        emi: false,
+      },
     });
   }
 
