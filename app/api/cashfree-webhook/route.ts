@@ -4,6 +4,9 @@ import { supabase } from "@/lib/supabase";
 export async function POST(req: Request) {
   const body = await req.text();
   const signature = req.headers.get("x-webhook-signature")!;
+  if (!signature) {
+    return Response.json({ ok: true });
+  }
 
   const expected = crypto
     .createHmac("sha256", process.env.CASHFREE_SECRET_KEY!)

@@ -16,9 +16,9 @@ export default function Home() {
 
     const order = await res.json();
 
-const cashfree = (window as any).Cashfree({
-  mode: "sandbox", // or "production"
-});
+    const cashfree = (window as any).Cashfree({
+      mode: "sandbox", // or "production"
+    });
     await cashfree.checkout({
       paymentSessionId: order.payment_session_id,
       redirectTarget: "_modal",
