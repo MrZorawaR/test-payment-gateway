@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+<script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
